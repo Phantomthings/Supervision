@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block title %}Communication - SCADA{% endblock %}
+{% block nav_communication %}active{% endblock %}
+{% block page_title %}Communication{% endblock %}
+
+{% block content %}
+<div class="card full-width">
+    <div class="card-header">
+        <h3>Communication Status</h3>
+    </div>
+    <div class="card-body">
+        <div class="comm-grid" 
+             hx-get="/api/communication" 
+             hx-trigger="load, every 2s"
+             hx-swap="innerHTML">
+            <div class="comm-item">
+                <span class="comm-label">Chargement...</span>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

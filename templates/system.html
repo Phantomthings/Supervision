@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block title %}Systeme - SCADA{% endblock %}
+{% block nav_system %}active{% endblock %}
+{% block page_title %}Systeme{% endblock %}
+
+{% block content %}
+<div class="card">
+    <div class="card-header">
+        <h3>System Information</h3>
+    </div>
+    <div class="card-body">
+        <div class="data-row">
+            <span class="label">System Version</span>
+            <span class="value">1.0.0</span>
+        </div>
+        <div class="data-row">
+            <span class="label">NTP Sync</span>
+            <span class="indicator success"></span>
+        </div>
+        <div class="data-row">
+            <span class="label">Uptime</span>
+            <span class="value">72h 15m</span>
+        </div>
+        <div class="data-row">
+            <span class="label">CPU Usage</span>
+            <span class="value">24%</span>
+        </div>
+    </div>
+</div>
+{% endblock %}
